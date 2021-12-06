@@ -22,7 +22,7 @@
       }
 
       body {
-        background: #eee;
+        background: rgb(230, 8, 8);
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #000;
@@ -78,6 +78,8 @@
         <div class="swiper-slide">Slide 8</div>
         <div class="swiper-slide">Slide 9</div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
 
@@ -86,18 +88,22 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
+      var swiper = new Swiper('.mySwiper', {
         spaceBetween: 30,
+        centeredSlides: true,
         autoplay: {
           delay: 2500,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         },
         speed: 500,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
       });
     </script>
   </body>
